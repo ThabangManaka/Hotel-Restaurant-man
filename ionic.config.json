@@ -1,0 +1,7 @@
+{
+  "name": "hotel-restuarant-man",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
