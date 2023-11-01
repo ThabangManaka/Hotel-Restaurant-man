@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'container',
     loadChildren: () => import('./pages/auth/container/container.module').then( m => m.ContainerPageModule)
   },
+  {
+    path: 'profile',
+    loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
+  },
 ];
 
 @NgModule({
