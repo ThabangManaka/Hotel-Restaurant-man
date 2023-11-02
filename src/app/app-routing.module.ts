@@ -32,6 +32,10 @@ const routes: Routes = [
     path: 'preferences',
     loadChildren: () => import('./pages/preferences/preferences.module').then( m => m.PreferencesPageModule)
   },
+  {
+    path: 'setting',
+    loadChildren: () => import('./pages/setting/setting.module').then( m => m.SettingPageModule)
+  },
 ];
 
 @NgModule({
