@@ -8,9 +8,10 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { BookChefPipe } from './pages/book-chef.pipe';
 
 @NgModule({
-  declarations: [AppComponent,EmailResetComponent],
+  declarations: [AppComponent,EmailResetComponent, BookChefPipe],
   imports: [BrowserModule,  HttpClientModule,IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
