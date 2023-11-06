@@ -13,7 +13,8 @@ import { SearchChefModel } from './models/searchChef';
 export class SearchChefPage implements OnInit {
   dish : any = [];
   returnDataFromModal : any;
-  constructor(private modalCtrl : ModalController,private service: AppServiceService, public loadingController: LoadingController, private router: Router,public popoverController: PopoverController) { }
+  constructor(private modalCtrl : ModalController,private service: AppServiceService, public loadingController: LoadingController, private router: Router,
+    public popoverController: PopoverController) { }
 
   ngOnInit() {
     this.presentLoading().then(() => {
@@ -25,6 +26,7 @@ export class SearchChefPage implements OnInit {
     });
   }
   async presentLoading() {
+
     const loading = await this.loadingController.create({
       message: "Please Wait .. ",
     });
@@ -32,6 +34,7 @@ export class SearchChefPage implements OnInit {
   }
 
   async presentPopover(ev: any) {
+    console.log('clicked');
     const popover = await this.popoverController.create({
      component: ProfileMenuPage,
       event: ev,
