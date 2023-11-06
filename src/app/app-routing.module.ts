@@ -36,6 +36,14 @@ const routes: Routes = [
     path: 'setting',
     loadChildren: () => import('./pages/setting/setting.module').then( m => m.SettingPageModule)
   },
+  {
+    path: 'search-chef',
+    loadChildren: () => import('./pages/search-chef/search-chef.module').then( m => m.SearchChefPageModule)
+  },
+  {
+    path: 'profile-menu',
+    loadChildren: () => import('./pages/popup/profile-menu/profile-menu.module').then( m => m.ProfileMenuPageModule)
+  },
 ];
 
 @NgModule({
